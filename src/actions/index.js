@@ -22,3 +22,9 @@ export const divide = () => {
 	};
 };
 
+export const clear = () => {
+	return {
+		type: 'CLEAR',
+	};
+};
+

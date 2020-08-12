@@ -8,6 +8,8 @@ const buttonsReducer = (state = 0, action) => {
 			return state * 2;
 		case 'DIVIDE':
 			return state / 2;
+		case 'CLEAR':
+			return state = 0;
 		default:
 			return state;
 	}
