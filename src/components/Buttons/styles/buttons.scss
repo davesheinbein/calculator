@@ -46,12 +46,16 @@ $btnColorsB: #ade8f4;
 			font-size: 18px;
 			&:hover {
 				background-color: #00b4d8;
-				color: #fffacd;
+                color: #fffacd;
+                border: 1px solid red;
+                border: none;
+                outline: none;
 			}
 			&:active {
-				background-color: $btnColorsA;
+                background-color: $btnColorsA;
                 color: $btnColorsB;
-                outline: 4px solid red;
+                border: none;
+                outline: none;
 			}
 		}
 	}

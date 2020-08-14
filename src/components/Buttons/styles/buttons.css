@@ -80,11 +80,15 @@
 .calcContainer .btnActionContainer button:hover {
   background-color: #00b4d8;
   color: #fffacd;
+  border: 1px solid red;
+  border: none;
+  outline: none;
 }
 
 .calcContainer .btnActionContainer button:active {
   background-color: #023e8a;
   color: #ade8f4;
-  outline: 4px solid red;
+  border: none;
+  outline: none;
 }
 /*# sourceMappingURL=buttons.css.map */
