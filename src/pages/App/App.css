@@ -5,11 +5,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #ffe45e;
+  font-family: 'VT323', monospace;
+}
+
+.App h1 {
+  font-size: 4rem;
+  color: #03045e;
 }
 /*# sourceMappingURL=App.css.map */

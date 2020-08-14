@@ -2,13 +2,6 @@ $borderColor: #03045e;
 $btnColorsA: #023e8a;
 $btnColorsB: #ade8f4;
 
-@mixin flexCenter($direction, $justified, $alignment) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: $justified;
-	align-items: $alignment;
-}
-
 .calcContainer {
 	height: fit-content;
 	width: 52vw;
@@ -42,8 +35,9 @@ $btnColorsB: #ade8f4;
 			border-radius: 2px;
 			background-color: $btnColorsB;
 			color: $btnColorsA;
-			font-weight: 900;
 			font-size: 2rem;
+			font-weight: 400;
+			font-family: 'Black Ops One', cursive;
 			&:hover {
 				background-color: #00b4d8;
 				color: #fffacd;
@@ -54,11 +48,13 @@ $btnColorsB: #ade8f4;
 			&:active {
 				background-color: $btnColorsA;
 				color: $btnColorsB;
-				border: none;
+				border: 1px solid $borderColor;
 				outline: none;
+				border-radius: 50%;
+				opacity: 75%;
 			}
 			&:focus {
-                outline: none;
+				outline: none;
 				border-left: 1px solid $borderColor;
 				border-bottom: 1px solid $borderColor;
 			}

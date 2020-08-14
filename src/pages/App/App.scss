@@ -1,8 +1,19 @@
+@mixin flexCenter($direction, $justified, $alignment) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justified;
+	align-items: $alignment;
+}
+
 .App {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter(column, center, center);
+  background-color: #ffe45e;
+  font-family: 'VT323', monospace;
+  h1 {
+    font-size: 4rem;
+    color: #03045e;
+  }
 }

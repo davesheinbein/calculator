@@ -88,8 +88,10 @@
 .calcContainer .btnActionContainer button:active {
   background-color: #023e8a;
   color: #ade8f4;
-  border: none;
+  border: 1px solid #03045e;
   outline: none;
+  border-radius: 50%;
+  opacity: 75%;
 }
 
 .calcContainer .btnActionContainer button:focus {
