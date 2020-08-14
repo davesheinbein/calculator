@@ -2,39 +2,44 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 50vw;
-  border: 5px solid black;
+  width: 52vw;
+  border: 5px solid #03045e;
   border-radius: 5px;
-  background-color: lightblue;
+  background-color: #48cae4;
 }
 
-.btnActionContainer {
+.calcContainer .resultsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 3px solid #03045e;
+  padding: 0px 1em;
+  margin: auto;
 }
 
-.resultsNum {
+.calcContainer .resultsContainer .resultsNum {
   width: 100%;
   height: 2em;
   padding: 0px;
-  border-bottom: 3px solid orange;
-  background-color: #d5ebff;
-  color: lightcoral;
+  color: #00171f;
   font-size: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -43,14 +48,43 @@
           align-items: center;
 }
 
-button {
-  width: 4em;
+.calcContainer .btnActionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calcContainer .btnActionContainer button {
+  width: 100%;
   height: 4em;
   border: none;
-  border-left: 1px solid red;
-  border-bottom: 1px solid red;
-  border-radius: 5px;
-  background-color: lightblue;
-  color: lightcoral;
+  border-left: 1px solid #03045e;
+  border-bottom: 1px solid #03045e;
+  border-radius: 2px;
+  background-color: #ade8f4;
+  color: #023e8a;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.calcContainer .btnActionContainer button:hover {
+  background-color: #00b4d8;
+  color: #fffacd;
+}
+
+.calcContainer .btnActionContainer button:active {
+  background-color: #023e8a;
+  color: #ade8f4;
+  outline: 4px solid red;
 }
 /*# sourceMappingURL=buttons.css.map */
