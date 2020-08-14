@@ -1,0 +1,15 @@
+.gestureLine {
+	width: 80vw;
+	height: 5px;
+	background: hotpink;
+	cursor: -webkit-grab;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	white-space: pre;
+	margin-bottom: 2em;
+	&:active {
+		cursor: -webkit-grabbing;
+	}
+}

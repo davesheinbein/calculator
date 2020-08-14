@@ -1,0 +1,14 @@
+.headingTitle {
+  cursor: -webkit-grab;
+}
+
+.headingTitle:active {
+  cursor: -webkit-grabbing;
+}
+
+.headingTitle h1 {
+  font-size: 4rem;
+  color: #03045e;
+  margin: 0px;
+}
+/*# sourceMappingURL=Title.css.map */

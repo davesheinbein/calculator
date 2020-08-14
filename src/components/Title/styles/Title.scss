@@ -1,0 +1,11 @@
+.headingTitle {
+    cursor: -webkit-grab;
+    &:active {
+        cursor: -webkit-grabbing;
+    }
+	h1 {
+		font-size: 4rem;
+		color: #03045e;
+		margin: 0px;
+	}
+}

@@ -6,6 +6,11 @@
   border: 5px solid #03045e;
   border-radius: 5px;
   background-color: #48cae4;
+  cursor: -webkit-grab;
+}
+
+.calcContainer:active {
+  cursor: -webkit-grabbing;
 }
 
 .calcContainer .resultsContainer {
@@ -73,8 +78,9 @@
   border-radius: 2px;
   background-color: #ade8f4;
   color: #023e8a;
-  font-weight: 900;
   font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Black Ops One', 'Anton', sans-serif, cursive;
 }
 
 .calcContainer .btnActionContainer button:hover {

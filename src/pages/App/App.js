@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+// Components
+import Title from '../../components/Title/Title';
 import Buttons from '../../components/Buttons/Buttons';
+import Gesture from '../../components/Gesture/Gesture';
+// React Spring
 import { Spring } from 'react-spring/renderprops';
-
 class App extends Component {
 	/*--- State ---*/
 	/*--- Handle Methods ---*/
 	/*--- Lifecycle Methods ---*/
+
+	
 	render() {
 		return (
 			<div className='App'>
@@ -16,7 +21,8 @@ class App extends Component {
 					config={{ duration: 2500 }}>
 					{(props) => (
 						<div style={props}>
-							<h1>React Redux Calculator</h1>
+							<Title />
+							<Gesture />
 						</div>
 					)}
 				</Spring>

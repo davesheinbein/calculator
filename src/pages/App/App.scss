@@ -6,14 +6,10 @@
 }
 
 .App {
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  @include flexCenter(column, center, center);
-  background-color: #ffe45e;
-  font-family: 'VT323', monospace;
-  h1 {
-    font-size: 4rem;
-    color: #03045e;
-  }
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	@include flexCenter(column, center, center);
+	background-color: #ffe45e;
+	font-family: 'Anton', 'VT323', monospace, sans-serif;
 }

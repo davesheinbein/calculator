@@ -1,0 +1,23 @@
+.gestureLine {
+  width: 80vw;
+  height: 5px;
+  background: hotpink;
+  cursor: -webkit-grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  white-space: pre;
+  margin-bottom: 2em;
+}
+
+.gestureLine:active {
+  cursor: -webkit-grabbing;
+}
+/*# sourceMappingURL=Gesture.css.map */
