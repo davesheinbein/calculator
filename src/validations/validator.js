@@ -28,7 +28,7 @@ export const validateInput = (input, text) => {
 	}
 	switch (text) {
 		case 'delete':
-			if (input.length === 1) {
+			if (input.length <= 1) {
 				input = '0';
 			} else {
 				input = input.slice(0, input.length - 1);

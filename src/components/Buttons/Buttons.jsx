@@ -122,11 +122,8 @@ const Buttons = (props) => {
 						}}>
 						<span>.</span>
 					</button>
-					<button
-						id='evalBtn'
-						onClick={() => {
-							props.onSubmit();
-						}}>
+					<button id='evalBtn'
+						onClick={() => { props.onSubmit(); }}>
 						<span>=</span>
 					</button>
 					<button

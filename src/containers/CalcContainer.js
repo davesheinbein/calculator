@@ -1,4 +1,4 @@
-// CalculatorContainer is the container class for <Calculator />
+// CalcContainer is the container class for <Calculator />
 // that passes the props value to <Calculator /> required for
 // presentational components <FinalResult /> and <KeyPad />
 import { connect } from 'react-redux';
@@ -18,6 +18,8 @@ let storeState = '';
 
 const evaluateExpression = (dispatch) => {
 	if (!isSuffixAnOperator(storeState.toString())) {
+		dispatch(getEvaluateAction(storeState)); //
+	} else if (isSuffixAnOperator(storeState.toString())) {
 		dispatch(getEvaluateAction(storeState)); //
 	}
 };
@@ -49,9 +51,9 @@ const mapDispatchToProps = (dispatch) => {
 	};
 };
 
-// Connecting container component CalculatorContainer with
+// Connecting container component CalcContainer with
 // presentational component Calculator
-export const CalculatorContainer = connect(
+export const CalcContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(Calculator);
