@@ -1,0 +1,174 @@
+.introContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000000;
+  font-family: 'Rock Salt', cursive;
+}
+
+.introContainer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.introContainer section h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  color: #111;
+  font-size: 2rem;
+  letter-spacing: 0.75em;
+}
+
+.introContainer section h1 span {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: table-cell;
+  -webkit-animation: strobeAnimation 4s linear infinite;
+          animation: strobeAnimation 4s linear infinite;
+}
+
+.introContainer section h1 span:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.introContainer section h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.introContainer section h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.introContainer section h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.introContainer section h1 span:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.introContainer section h1 span:nth-child(6) {
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
+.introContainer section h1 span:nth-child(7) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.introContainer section h1 span:nth-child(8) {
+  -webkit-animation-delay: 1.75s;
+          animation-delay: 1.75s;
+}
+
+.introContainer section h1 span:nth-child(9) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.introContainer section h1 span:nth-child(10) {
+  -webkit-animation-delay: 2.25s;
+          animation-delay: 2.25s;
+}
+
+.introContainer section h1 span:nth-child(11) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(0%, 46%);
+          transform: translate(0%, 46%);
+}
+
+@-webkit-keyframes strobeAnimation {
+  0%,
+  100% {
+    color: #ffffff;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    text-shadow: 0 0 10px #1ef1bd, 0 0 20px #1ef1bd, 0 0 40px #1ef1bd, 0 0 60px #1ef1bd, 0 0 80px #1ef1bd, 0 0 100px #1ef1bd, 0 0 120px #1ef1bd, 0 0 140px #1ef1bd, 0 0 160px #1ef1bd, 0 0 200px #1ef1bd, 0 0 300px #d0fff3, 0 0 400px #f9fafa;
+  }
+  5%,
+  95% {
+    color: transparent;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    text-shadow: none;
+  }
+}
+
+@keyframes strobeAnimation {
+  0%,
+  100% {
+    color: #ffffff;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+    text-shadow: 0 0 10px #1ef1bd, 0 0 20px #1ef1bd, 0 0 40px #1ef1bd, 0 0 60px #1ef1bd, 0 0 80px #1ef1bd, 0 0 100px #1ef1bd, 0 0 120px #1ef1bd, 0 0 140px #1ef1bd, 0 0 160px #1ef1bd, 0 0 200px #1ef1bd, 0 0 300px #d0fff3, 0 0 400px #f9fafa;
+  }
+  5%,
+  95% {
+    color: transparent;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    text-shadow: none;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=IntroAnimation.css.map */

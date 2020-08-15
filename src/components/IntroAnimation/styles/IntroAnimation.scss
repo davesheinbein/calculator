@@ -1,0 +1,107 @@
+@mixin flexCenter($direction, $justified, $alignment) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justified;
+	align-items: $alignment;
+}
+
+@mixin heightWidth {
+	width: 100%;
+	height: 100%;
+}
+
+@mixin marginPadding {
+	margin: 0;
+	padding: 0;
+}
+
+.introContainer {
+	@include flexCenter(column, center, center);
+	@include marginPadding;
+	height: 100vh;
+	width: 100vw;
+	background: #000000;
+	font-family: 'Rock Salt', cursive;
+
+	section {
+		@include flexCenter(column, center, center);
+		@include marginPadding;
+		@include heightWidth;
+		h1 {
+			@include flexCenter(row, center, center);
+			@include marginPadding;
+			margin: auto;
+			color: #111;
+			font-size: 2rem;
+			letter-spacing: 0.75em;
+			span {
+				@include heightWidth;
+				@include marginPadding;
+				display: table-cell;
+				animation: strobeAnimation 4s linear infinite;
+				&:nth-child(1) {
+					animation-delay: 0s;
+				}
+				&:nth-child(2) {
+					animation-delay: 0.25s;
+				}
+				&:nth-child(3) {
+					animation-delay: 0.5s;
+				}
+				&:nth-child(4) {
+					animation-delay: 0.75s;
+				}
+				&:nth-child(5) {
+					animation-delay: 1s;
+				}
+				&:nth-child(6) {
+					animation-delay: 1.25s;
+				}
+				&:nth-child(7) {
+					animation-delay: 1.5s;
+				}
+				&:nth-child(8) {
+					animation-delay: 1.75s;
+				}
+				&:nth-child(9) {
+					animation-delay: 2s;
+				}
+				&:nth-child(10) {
+					animation-delay: 2.25s;
+				}
+				&:nth-child(11) {
+					animation-delay: 2.5s;
+					position: absolute;
+					top: 0%;
+					left: 0%;
+					transform: translate(0%, 46%);
+				}
+				@keyframes strobeAnimation {
+					0%,
+					100% {
+						color: #ffffff;
+						filter: blur(3px);
+						text-shadow: 0 0 10px #1ef1bd, 0 0 20px #1ef1bd,
+							0 0 40px #1ef1bd, 0 0 60px #1ef1bd,
+							0 0 80px #1ef1bd, 0 0 100px #1ef1bd,
+							0 0 120px #1ef1bd, 0 0 140px #1ef1bd,
+							0 0 160px #1ef1bd, 0 0 200px #1ef1bd,
+							0 0 300px #d0fff3, 0 0 400px #f9fafa;
+					}
+					5%,
+					95% {
+						color: transparent;
+						filter: blur(0px);
+						text-shadow: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+	h1 {
+		font-size: 3rem;
+	}
+}

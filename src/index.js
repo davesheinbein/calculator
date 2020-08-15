@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './pages/App/App';
-import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
 import calculationReducer from './reducers/calculationReducer';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import './index.css';
 
 const store = createStore(
 	calculationReducer,
@@ -16,11 +17,13 @@ const store = createStore(
 const renderCalculator = () => {
 	ReactDOM.render(
 		// Provider to bind the store with the container
+		<Router>
 		<React.StrictMode>
 			<Provider store={store}>
-				<App />
+			<Route render={({ history }) => <App history={history} />} />
 			</Provider>
-		</React.StrictMode>,
+		</React.StrictMode>
+		</Router>,
 		document.getElementById('root')
 	);
 };
