@@ -1,3 +1,12 @@
+@mixin noSelect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
+
 .gestureLine {
 	width: 80vw;
 	height: 5px;
@@ -11,5 +20,6 @@
 	margin-bottom: 2em;
 	&:active {
 		cursor: -webkit-grabbing;
+		@include noSelect();
 	}
 }
