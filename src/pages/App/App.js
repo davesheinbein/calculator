@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 // Components
 import Title from '../../components/Title/Title';
-import Buttons from '../../components/Calculator/Calculator';
+import { CalculatorContainer } from '../../containers/calculatorContainer';
 import Gesture from '../../components/Headingline/Headingline';
 // React Spring
 import { Spring } from 'react-spring/renderprops';
@@ -32,7 +32,7 @@ class App extends Component {
 					config={{ duration: 2500 }}>
 					{(props) => (
 						<div style={props}>
-							<Buttons />
+							<CalculatorContainer />
 						</div>
 					)}
 				</Spring>

@@ -9,7 +9,7 @@ import { useGesture } from 'react-with-gesture';
 
 import './styles/Calculator.css';
 
-const Calculator = () => {
+const Calculator = (props) => {
 	// TO make grabable
 	const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
 	const bind = useGesture(({ down, delta, velocity }) => {
@@ -25,26 +25,25 @@ const Calculator = () => {
 	});
 
 	return (
-		<animated.div
-			{...bind()}
-			style={{
-				transform: xy.interpolate(
-					(x, y) => `translate3d(${x}px,${y}px,0)`
-				),
-			}}
-			className='calcContainer'>
-			<FinalAnswer
-				inputExpression={this.props.inputExpression}
-			/>
-			<Buttons
-				onClick={this.props.onClick}
-				onSubmit={() => {
-					this.props.onSubmit();
+			<animated.div
+				{...bind()}
+				style={{
+					transform: xy.interpolate(
+						(x, y) => `translate3d(${x}px,${y}px,0)`
+					),
 				}}
-			/>
-		</animated.div>
+				className='calcContainer'>
+				<FinalAnswer
+					inputExpression={props.inputExpression}
+				/>
+				<Buttons
+					onClick={props.onClick}
+					onSubmit={() => {
+						props.onSubmit();
+					}}
+				/>
+			</animated.div>
 	);
 };
 
 export default Calculator;
-

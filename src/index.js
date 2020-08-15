@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './pages/App/App';
+import App from './pages/App/App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
-import { CalculatorContainer } from './containers/calculatorContainer';
-import allReducers from './reducers/index';
+import calculationReducer from './reducers/calculationReducer';
 import { Provider } from 'react-redux';
 
 const store = createStore(
-	allReducers,
+	calculationReducer,
 	window.__REDUX_DEVTOOLS_EXTENSION__ &&
 		window.__REDUX_DEVTOOLS_EXTENSION__()
 );
@@ -17,21 +16,14 @@ const store = createStore(
 const renderCalculator = () => {
 	ReactDOM.render(
 		// Provider to bind the store with the container
-		<Provider store={store}>
-			<CalculatorContainer />
-		</Provider>,
+		<React.StrictMode>
+			<Provider store={store}>
+				<App />
+			</Provider>
+		</React.StrictMode>,
 		document.getElementById('root')
 	);
 };
-
-// ReactDOM.render(
-// 	<React.StrictMode>
-// 		<Provider store={store}>
-// 			<App />
-// 		</Provider>
-// 	</React.StrictMode>,
-// 	document.getElementById('root')
-// );
 
 store.subscribe(() => {
 	renderCalculator();
