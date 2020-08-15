@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 // Components
 import Title from '../../components/Title/Title';
-import Buttons from '../../components/Buttons/Buttons';
-import Gesture from '../../components/Gesture/Gesture';
+import Buttons from '../../components/Calculator/Calculator';
+import Gesture from '../../components/Headingline/Headingline';
 // React Spring
 import { Spring } from 'react-spring/renderprops';
 class App extends Component {

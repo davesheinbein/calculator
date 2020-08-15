@@ -1,0 +1,22 @@
+$borderColor: #03045e;
+
+@mixin flexCenter($direction, $justified, $alignment) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justified;
+	align-items: $alignment;
+}
+
+.calcContainer {
+	height: fit-content;
+	width: 52vw;
+	border: 5px solid $borderColor;
+	border-radius: 5px;
+	background-color: #48cae4;
+	cursor: -webkit-grab;
+
+	&:active {
+		cursor: -webkit-grabbing;
+	}
+
+}

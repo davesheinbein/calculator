@@ -1,0 +1,15 @@
+.calcContainer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 52vw;
+  border: 5px solid #03045e;
+  border-radius: 5px;
+  background-color: #48cae4;
+  cursor: -webkit-grab;
+}
+
+.calcContainer:active {
+  cursor: -webkit-grabbing;
+}
+/*# sourceMappingURL=Calculator.css.map */

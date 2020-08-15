@@ -2,9 +2,9 @@ import React from 'react';
 import clamp from 'lodash-es/clamp';
 import { useSpring, animated } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
-import './styles/Gesture.css'
+import './styles/Headingline.css'
 
-function Gesture() {
+function Headingline() {
 	const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
 	const bind = useGesture(({ down, delta, velocity }) => {
 		velocity = clamp(velocity, 1, 8);
@@ -29,4 +29,4 @@ function Gesture() {
 	);
 }
 
-export default Gesture;
+export default Headingline;

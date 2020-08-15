@@ -1,0 +1,23 @@
+$borderColor: #03045e;
+
+@mixin flexCenter($direction, $justified, $alignment) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justified;
+	align-items: $alignment;
+}
+
+.resultsContainer {
+    @include flexCenter(row, center, center);
+    border-bottom: 3px solid $borderColor;
+    padding: 0px 1em;
+    margin: auto;
+    .resultsNum {
+        width: 100%;
+        height: 2em;
+        padding: 0px;
+        color: #00171f;
+        font-size: 2rem;
+        @include flexCenter(row, flex-end, center);
+    }
+}

@@ -9,68 +9,40 @@ $btnColorsB: #ade8f4;
 	align-items: $alignment;
 }
 
-.calcContainer {
-	height: fit-content;
-	width: 52vw;
-	border: 5px solid $borderColor;
-	border-radius: 5px;
-	background-color: #48cae4;
-	cursor: -webkit-grab;
-
-	&:active {
-		cursor: -webkit-grabbing;
-	}
-
-	.resultsContainer {
-		@include flexCenter(row, center, center);
-		border-bottom: 3px solid $borderColor;
-		padding: 0px 1em;
-		margin: auto;
-		.resultsNum {
-			width: 100%;
-			height: 2em;
-			padding: 0px;
-			color: #00171f;
-			font-size: 2rem;
-			@include flexCenter(row, flex-end, center);
-		}
-	}
-
-	.btnActionContainer {
-		@include flexCenter(row, flex-end, center);
-		button {
-			width: 100%;
-			height: 3.5em;
+.btnActionContainer {
+	@include flexCenter(row, flex-end, center);
+	button {
+		width: 100%;
+		height: 3.5em;
+		border: none;
+		border-left: 1px solid $borderColor;
+		border-bottom: 1px solid $borderColor;
+		border-radius: 2px;
+		background-color: $btnColorsB;
+		color: $btnColorsA;
+		font-size: 2rem;
+		font-weight: 400;
+		font-family: 'Black Ops One', 'Anton', sans-serif,
+			cursive;
+		&:hover {
+			background-color: #00b4d8;
+			color: #fffacd;
+			border: 1px solid red;
 			border: none;
+			outline: none;
+		}
+		&:active {
+			background-color: $btnColorsA;
+			color: $btnColorsB;
+			border: 1px solid $borderColor;
+			outline: none;
+			border-radius: 50%;
+			opacity: 75%;
+		}
+		&:focus {
+			outline: none;
 			border-left: 1px solid $borderColor;
 			border-bottom: 1px solid $borderColor;
-			border-radius: 2px;
-			background-color: $btnColorsB;
-			color: $btnColorsA;
-			font-size: 2rem;
-			font-weight: 400;
-			font-family: 'Black Ops One', 'Anton', sans-serif,
-				cursive;
-			&:hover {
-				background-color: #00b4d8;
-				color: #fffacd;
-				border: 1px solid red;
-				border: none;
-				outline: none;
-			}
-			&:active {
-				background-color: $btnColorsA;
-				color: $btnColorsB;
-				border: 1px solid $borderColor;
-				outline: none;
-				border-radius: 50%;
-				opacity: 75%;
-			}
-			&:focus {
-				outline: none;
-				border-left: 1px solid $borderColor;
-				border-bottom: 1px solid $borderColor;
-			}
 		}
 	}
 }
