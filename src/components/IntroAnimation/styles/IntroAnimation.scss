@@ -25,8 +25,9 @@
 
 	section {
 		@include flexCenter(column, center, center);
-		@include marginPadding;
 		@include heightWidth;
+		margin: auto;
+		height: 100vh;
 		h1 {
 			@include flexCenter(row, center, center);
 			@include marginPadding;
@@ -35,7 +36,6 @@
 			font-size: 2rem;
 			letter-spacing: 0.75em;
 			span {
-				@include heightWidth;
 				@include marginPadding;
 				display: table-cell;
 				animation: strobeAnimation 4s linear infinite;
@@ -72,9 +72,9 @@
 				&:nth-child(11) {
 					animation-delay: 2.5s;
 					position: absolute;
-					top: 0%;
-					left: 0%;
-					transform: translate(0%, 46%);
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
 				}
 				@keyframes strobeAnimation {
 					0%,
