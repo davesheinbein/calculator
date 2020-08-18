@@ -49,6 +49,7 @@ body,
           transform-style: preserve-3d;
   border-radius: 50%;
   background: whitesmoke;
+  cursor: pointer;
   -webkit-box-shadow: 0 0 10px rgba(30, 241, 189, 0.5);
           box-shadow: 0 0 10px rgba(30, 241, 189, 0.5);
   opacity: 0.6;

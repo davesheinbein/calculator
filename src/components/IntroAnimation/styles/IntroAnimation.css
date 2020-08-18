@@ -16,7 +16,11 @@
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: #000000;
+  background: url(../../../static/images/Calculator.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #000000;
   font-family: 'Rock Salt', cursive;
 }
 
@@ -38,6 +42,11 @@
   height: 100%;
   margin: auto;
   height: 100vh;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .introContainer section h1 {

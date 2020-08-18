@@ -22,9 +22,9 @@ function IntroAnimation() {
 					<span>CALCULATOR</span>
 				</h1>
 			</section>
-			<Link to='/main' className='NavLink'>
+			{/* <Link to='/main' className='NavLink'> */}
 				<Goo />
-			</Link>
+			{/* </Link> */}
 			<FallingGoo />
 		</div>
 	);
