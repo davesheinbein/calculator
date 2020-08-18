@@ -1,6 +1,7 @@
 import React from 'react';
 import Goo from '../Goo/Goo';
 import FallingGoo from '../FallingGoo/FallingGoo';
+import CalcImg from '../../images/Calculator.png';
 import './styles/IntroAnimation.css';
 import { Link } from 'react-router-dom';
 
@@ -23,8 +24,11 @@ function IntroAnimation() {
 				</h1>
 			</section>
 			{/* <Link to='/main' className='NavLink'> */}
-				<Goo />
+			<Goo />
 			{/* </Link> */}
+			<div id='calcImgContainer'>
+				<img src={CalcImg} id='calcImg' alt='CalcImg' />
+			</div>
 			<FallingGoo />
 		</div>
 	);

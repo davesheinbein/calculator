@@ -20,13 +20,22 @@
 	@include marginPadding;
 	height: 100vh;
 	width: 100vw;
-	background: url(../../../static/images/Calculator.png);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
 	background-color: #000000;
 	font-family: 'Rock Salt', cursive;
-
+	#calcImgContainer {
+		width: 100%;
+		height: 100%;
+		@include flexCenter(row, center, center);
+		z-index: 999;
+		#calcImg {
+			position: absolute;
+			top: 3%;
+			left: 50%;
+			transform: translate(-50%, -0%);
+			width: 80vw;
+			height: 95vh;
+		}
+	}
 	section {
 		@include flexCenter(column, center, center);
 		@include heightWidth;
