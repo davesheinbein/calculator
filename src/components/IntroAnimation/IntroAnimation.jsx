@@ -1,5 +1,6 @@
 import React from 'react';
 import Goo from '../Goo/Goo';
+import FallingGoo from '../FallingGoo/FallingGoo';
 import './styles/IntroAnimation.css';
 import { Link } from 'react-router-dom';
 
@@ -24,6 +25,7 @@ function IntroAnimation() {
 			<Link to='/main' className='NavLink'>
 				<Goo />
 			</Link>
+			<FallingGoo />
 		</div>
 	);
 }

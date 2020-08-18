@@ -32,13 +32,13 @@
 			@include flexCenter(row, center, center);
 			@include marginPadding;
 			margin: auto;
-			color: #111;
+			color: transparent;
 			font-size: 2rem;
 			letter-spacing: 0.75em;
 			span {
 				@include marginPadding;
 				display: table-cell;
-				animation: strobeAnimation 4s linear infinite;
+				animation: strobeAnimation 5s linear infinite;
 				&:nth-child(1) {
 					animation-delay: 0s;
 				}
@@ -84,9 +84,7 @@
 						text-shadow: 0 0 10px #1ef1bd, 0 0 20px #1ef1bd,
 							0 0 40px #1ef1bd, 0 0 60px #1ef1bd,
 							0 0 80px #1ef1bd, 0 0 100px #1ef1bd,
-							0 0 120px #1ef1bd, 0 0 140px #1ef1bd,
-							0 0 160px #1ef1bd, 0 0 200px #1ef1bd,
-							0 0 300px #d0fff3, 0 0 400px #f9fafa;
+							0 0 120px #1ef1bd, 0 0 140px #1ef1bd;
 					}
 					5%,
 					95% {
