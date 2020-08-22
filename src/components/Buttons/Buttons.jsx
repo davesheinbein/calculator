@@ -54,7 +54,9 @@ const Buttons = (props) => {
 						onClick={() => {
 							props.onClick('/');
 						}}>
-						<span>&#247;</span>
+						<span>
+							<i className='fas fa-divide'></i>
+						</span>
 					</button>
 				</div>
 				<div className='btnActionContainer'>
@@ -80,7 +82,11 @@ const Buttons = (props) => {
 						onClick={() => {
 							props.onClick('*');
 						}}>
-						<span>&#215;</span>
+						<span>
+							<i
+								className='fa fa-times'
+								aria-hidden='true'></i>
+						</span>
 					</button>
 				</div>
 				<div className='btnActionContainer'>
@@ -106,7 +112,11 @@ const Buttons = (props) => {
 						onClick={() => {
 							props.onClick('-');
 						}}>
-						<span>-</span>
+						<span>
+							<i
+								className='fa fa-minus'
+								aria-hidden='true'></i>
+						</span>
 					</button>
 				</div>
 				<div className='btnActionContainer'>
@@ -122,15 +132,24 @@ const Buttons = (props) => {
 						}}>
 						<span>.</span>
 					</button>
-					<button id='evalBtn'
-						onClick={() => { props.onSubmit(); }}>
-						<span>=</span>
+					<button
+						id='evalBtn'
+						onClick={() => {
+							props.onSubmit();
+						}}>
+						<span>
+							<i className='fas fa-equals'></i>
+						</span>
 					</button>
 					<button
 						onClick={() => {
 							props.onClick('+');
 						}}>
-						<span>+</span>
+						<span>
+							<i
+								className='fa fa-plus'
+								aria-hidden='true'></i>
+						</span>
 					</button>
 				</div>
 			</section>

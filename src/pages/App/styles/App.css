@@ -17,6 +17,7 @@
           align-items: center;
   background-color: #ffe45e;
   font-family: 'Anton', 'VT323', monospace, sans-serif;
+  overflow: hidden;
 }
 
 .App .container {
@@ -37,5 +38,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#icon {
+  font-size: 30px;
 }
 /*# sourceMappingURL=App.css.map */

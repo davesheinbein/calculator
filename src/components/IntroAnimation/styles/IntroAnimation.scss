@@ -20,20 +20,20 @@
 	@include marginPadding;
 	height: 100vh;
 	width: 100vw;
-	background-color: #000000;
+	background: radial-gradient(#333333, #000000);
 	font-family: 'Rock Salt', cursive;
-	#calcImgContainer {
+	#container {
 		width: 100%;
 		height: 100%;
 		@include flexCenter(row, center, center);
-		z-index: 999;
 		#calcImg {
+			z-index: 9;
 			position: absolute;
 			top: 3%;
 			left: 50%;
 			transform: translate(-50%, -0%);
-			width: 80vw;
-			height: 95vh;
+			width: 80%;
+			height: 90%;
 		}
 	}
 	section {

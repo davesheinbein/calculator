@@ -23,12 +23,13 @@ function IntroAnimation() {
 					<span>CALCULATOR</span>
 				</h1>
 			</section>
-			{/* <Link to='/main' className='NavLink'> */}
-			<Goo />
-			{/* </Link> */}
-			<div id='calcImgContainer'>
+			<div id='container'>
 				<img src={CalcImg} id='calcImg' alt='CalcImg' />
 			</div>
+			<Link to='/main' className='NavLink'>
+				<Goo />
+			</Link>
+
 			<FallingGoo />
 		</div>
 	);
