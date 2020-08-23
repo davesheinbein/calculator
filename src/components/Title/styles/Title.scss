@@ -29,15 +29,15 @@
 		}
 
 		@include media('>425px', '<=tablet') {
-			font-size: 4rem;
+			font-size: 3rem;
 		}
 
 		@include media('>tablet', '<desktop') {
-			font-size: 7.5rem;
+			font-size: 5rem;
 		}
 
 		@include media('>=desktop') {
-			font-size: 9rem;
+			font-size: 8rem;
 		}
 
 		@include media('>=LGdesktop', 'retina2x') {

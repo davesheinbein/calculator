@@ -51,19 +51,19 @@
 
 @media (min-width: 426px) and (max-width: 768px) {
   .headingTitle h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1365px) {
   .headingTitle h1 {
-    font-size: 7.5rem;
+    font-size: 5rem;
   }
 }
 
 @media (min-width: 1366px) {
   .headingTitle h1 {
-    font-size: 9rem;
+    font-size: 8rem;
   }
 }
 
