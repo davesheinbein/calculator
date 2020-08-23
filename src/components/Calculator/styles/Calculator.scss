@@ -1,3 +1,5 @@
+@import '../../breakpoints/breakpoints.scss';
+
 $borderColor: #03045e;
 
 @mixin noSelect {
@@ -11,7 +13,7 @@ $borderColor: #03045e;
 
 .calcContainer {
 	height: fit-content;
-	width: 52vw;
+	width: auto;
 	border: 5px solid $borderColor;
 	border-radius: 5px;
 	background-color: #48cae4;
@@ -20,5 +22,29 @@ $borderColor: #03045e;
 	&:active {
 		cursor: -webkit-grabbing;
 		@include noSelect();
+	}
+
+	@include media('<=phone') {
+		width: 95vw;
+	}
+
+	@include media('>phone', '<=425px') {
+		width: 95vw;
+	}
+
+	@include media('>425px', '<=tablet') {
+		width: 95vw;
+	}
+
+	@include media('>tablet', '<desktop') {
+		width: 60vw;
+	}
+
+	@include media('>=desktop') {
+		width: 60vw;
+	}
+
+	@include media('>=LGdesktop', 'retina2x') {
+		width: 70vw;
 	}
 }

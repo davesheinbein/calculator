@@ -18,6 +18,7 @@
   background-color: #ffe45e;
   font-family: 'Anton', 'VT323', monospace, sans-serif;
   overflow: hidden;
+  position: fixed;
 }
 
 .App .container {

@@ -8,13 +8,14 @@
 }
 
 .gestureLine {
-	width: 80vw;
+	width: 95vw;
 	height: 5px;
 	background: hotpink;
 	cursor: -webkit-grab;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin: 0px auto;
 	color: white;
 	white-space: pre;
 	margin-bottom: 2em;

@@ -1,3 +1,5 @@
+@import '../../breakpoints/breakpoints.scss';
+
 @mixin noSelect {
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
@@ -15,8 +17,31 @@
 		@include noSelect();
 	}
 	h1 {
-		font-size: 4rem;
+		font-size: 20px;
 		color: #03045e;
 		margin: 0px;
+		@include media('<=phone') {
+			font-size: 2rem;
+		}
+
+		@include media('>phone', '<=425px') {
+			font-size: 2.75rem;
+		}
+
+		@include media('>425px', '<=tablet') {
+			font-size: 4rem;
+		}
+
+		@include media('>tablet', '<desktop') {
+			font-size: 7.5rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 9rem;
+		}
+
+		@include media('>=LGdesktop', 'retina2x') {
+			font-size: 10rem;
+		}
 	}
 }

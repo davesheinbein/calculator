@@ -1,4 +1,4 @@
-@import '.';
+@import '../../breakpoints/breakpoints.scss';
 
 @mixin flexCenter($direction, $justified, $alignment) {
 	display: flex;
@@ -34,8 +34,9 @@
 			top: 3%;
 			left: 50%;
 			transform: translate(-50%, -0%);
-			width: 80%;
-			height: 90%;
+			width: 85%;
+			height: 95%;
+			cursor: pointer;
 		}
 	}
 	section {
@@ -52,8 +53,29 @@
 			@include marginPadding;
 			margin: auto;
 			color: transparent;
-			// font-size: 2rem;
+			font-size: 20px;
 			letter-spacing: 0.75em;
+			@include media('<=phone') {
+				font-size: 12px;
+				font-stretch: expanded;
+			}
+			@include media('>phone', '<=425px') {
+				font-size: 16px;
+			}
+
+			@include media('>425px', '<=tablet') {
+				font-size: 30px;
+			}
+
+			@include media('>tablet', '<desktop') {
+				font-size: 38px;
+			}
+			@include media('>=desktop') {
+				font-size: 52px;
+			}
+			@include media('>=LGdesktop', 'retina2x') {
+				font-size: 68px;
+			}
 			span {
 				@include marginPadding;
 				display: table-cell;
@@ -111,42 +133,6 @@
 						filter: blur(0px);
 						text-shadow: none;
 					}
-				}
-			}
-		}
-	}
-}
-
-@media (max-device-width: 812px) {
-	.introContainer {
-		.section {
-			h1 {
-				span {
-					font-size: 0.5rem;
-				}
-			}
-		}
-	}
-}
-
-@media (max-device-width: 1366px) {
-	.introContainer {
-		.section {
-			h1 {
-				span {
-					// font-size: 1rem;
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: 1600px) {
-	.introContainer {
-		.section {
-			h1 {
-				span {
-					// font-size: 1rem;
 				}
 			}
 		}

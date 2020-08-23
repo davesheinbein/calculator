@@ -1,3 +1,8 @@
+/**
+*
+* Testing
+*
+**/
 .introContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,8 +50,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  width: 80%;
-  height: 90%;
+  width: 85%;
+  height: 95%;
+  cursor: pointer;
 }
 
 .introContainer section {
@@ -92,7 +98,45 @@
   padding: 0;
   margin: auto;
   color: transparent;
+  font-size: 20px;
   letter-spacing: 0.75em;
+}
+
+@media (max-width: 360px) {
+  .introContainer section h1 {
+    font-size: 12px;
+    font-stretch: expanded;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 425px) {
+  .introContainer section h1 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .introContainer section h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .introContainer section h1 {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .introContainer section h1 {
+    font-size: 52px;
+  }
+}
+
+@media (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1920px) and (min-resolution: 192dpi) {
+  .introContainer section h1 {
+    font-size: 68px;
+  }
 }
 
 .introContainer section h1 span {
@@ -194,12 +238,6 @@
     -webkit-filter: blur(0px);
             filter: blur(0px);
     text-shadow: none;
-  }
-}
-
-@media (max-device-width: 812px) {
-  .introContainer .section h1 span {
-    font-size: 0.5rem;
   }
 }
 /*# sourceMappingURL=IntroAnimation.css.map */

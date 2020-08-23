@@ -1,8 +1,13 @@
+/**
+*
+* Testing
+*
+**/
 .calcContainer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 52vw;
+  width: auto;
   border: 5px solid #03045e;
   border-radius: 5px;
   background-color: #48cae4;
@@ -21,5 +26,41 @@
   -ms-user-select: none;
   /* Internet Explorer/Edge */
   user-select: none;
+}
+
+@media (max-width: 360px) {
+  .calcContainer {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 425px) {
+  .calcContainer {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .calcContainer {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1365px) {
+  .calcContainer {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1366px) {
+  .calcContainer {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1920px) and (min-resolution: 192dpi) {
+  .calcContainer {
+    width: 70vw;
+  }
 }
 /*# sourceMappingURL=Calculator.css.map */

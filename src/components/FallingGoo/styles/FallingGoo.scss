@@ -1,3 +1,4 @@
+
 @mixin flexCenter($direction, $justified, $alignment) {
 	display: flex;
 	flex-direction: $direction;
@@ -15,29 +16,37 @@
 	animation-timing-function: ease-in;
 }
 
+@mixin posAbsolute {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 @mixin HaW($hei, $wei) {
 	height: $hei;
 	width: $wei;
 }
+
+$shadowGreen: rgba(30, 241, 189, 0.5);
+$shadowBlue: rgba(64, 188, 249, 0.5);
+$shadowRed: rgba(249, 83, 64, 0.5);
+$shadowBrown: rgba(255, 153, 0, 0.5);
+$shadowPurple: rgba(64, 85, 249, 0.5);
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	.section {
-		position: absolute;
-		top: 0;
-		left: 0;
+		@include posAbsolute();
 		width: 100%;
 		height: 100vh;
 		overflow: hidden;
 		@include flexCenter(row, center, center);
 		.set {
-			position: absolute;
+			@include posAbsolute();
 			width: 100%;
 			height: 100%;
-			top: 0;
-			left: 0;
 			pointer-events: none;
 			div {
 				position: absolute;
@@ -144,9 +153,8 @@
 			rgba(208, 255, 243, 1) 0%,
 			rgba(30, 241, 189, 1) 100%
 		);
-		box-shadow: 0 0 10px rgba(30, 241, 189, 0.5),
-			0 0 20px rgba(30, 241, 189, 0.5),
-			0 0 40px rgba(30, 241, 189, 0.5);
+		box-shadow: 0 0 10px $shadowGreen, 0 0 20px $shadowGreen,
+			0 0 40px $shadowGreen;
 	}
 	25% {
 		background: radial-gradient(
@@ -154,10 +162,8 @@
 			rgba(250, 255, 208, 1) 0%,
 			rgba(222, 32, 32, 1) 100%
 		);
-		box-shadow: 0 0 10px rgba(30, 241, 189, 0.5),
-			0 0 20px rgba(64, 188, 249, 0.5),
-			0 0 40px rgba(64, 188, 249, 0.5),
-			0 0 60px rgba(64, 188, 249, 0.5);
+		box-shadow: 0 0 10px $shadowBlue, 0 0 20px $shadowBlue,
+			0 0 40px $shadowBlue, 0 0 60px $shadowBlue;
 	}
 	50% {
 		background: radial-gradient(
@@ -165,11 +171,9 @@
 			rgba(255, 233, 208, 1) 0%,
 			rgba(241, 144, 30, 1) 100%
 		);
-		box-shadow: 0 0 10px rgba(30, 241, 189, 0.5),
-			0 0 20px rgba(249, 83, 64, 0.5),
-			0 0 40px rgba(249, 83, 64, 0.5),
-			0 0 60px rgba(249, 83, 64, 0.5),
-			0 0 80px rgba(249, 83, 64, 0.5);
+		box-shadow: 0 0 10px $shadowRed, 0 0 20px $shadowRed,
+			0 0 40px $shadowRed, 0 0 60px $shadowRed,
+			0 0 80px $shadowRed;
 	}
 	75% {
 		background: radial-gradient(
@@ -177,12 +181,9 @@
 			rgba(208, 239, 255, 1) 0%,
 			rgba(254, 255, 0, 1) 100%
 		);
-		box-shadow: 0 0 10px rgba(30, 241, 189, 0.5),
-			0 0 20px rgba(255, 153, 0, 0.5),
-			0 0 40px rgba(249, 176, 64, 0.5),
-			0 0 60px rgba(249, 176, 64, 0.5),
-			0 0 80px rgba(249, 176, 64, 0.5),
-			0 0 100px rgba(249, 176, 64, 0.5);
+		box-shadow: 0 0 10px $shadowBrown, 0 0 20px $shadowBrown,
+			0 0 40px $shadowBrown, 0 0 60px $shadowBrown,
+			0 0 80px $shadowBrown, 0 0 100px $shadowBrown;
 	}
 	100% {
 		background: radial-gradient(
@@ -190,13 +191,10 @@
 			rgba(249, 208, 255, 1) 0%,
 			rgba(89, 30, 241, 1) 100%
 		);
-		box-shadow: 0 0 10px rgba(30, 241, 189, 0.5),
-			0 0 20px rgba(64, 85, 249, 0.5),
-			0 0 40px rgba(64, 85, 249, 0.5),
-			0 0 60px rgba(64, 85, 249, 0.5),
-			0 0 80px rgba(64, 85, 249, 0.5),
-			0 0 100px rgba(64, 85, 249, 0.5),
-			0 0 120px rgba(64, 85, 249, 0.5);
+		box-shadow: 0 0 10px $shadowPurple,
+			0 0 20px $shadowPurple, 0 0 40px $shadowPurple,
+			0 0 60px $shadowPurple, 0 0 80px $shadowPurple,
+			0 0 100px $shadowPurple, 0 0 120px $shadowPurple;
 	}
 }
 
@@ -204,9 +202,11 @@
 	0% {
 		top: -20%;
 		transform: scale(1, 1);
+		opacity: 50%;
 	}
 	100% {
 		top: 120%;
 		transform: scale(5, 5);
+		opacity: 100%;
 	}
 }

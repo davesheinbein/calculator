@@ -29,11 +29,13 @@ function IntroAnimation() {
 							</h1>
 						</section>
 						<div id='container'>
-							<img
-								src={CalcImg}
-								id='calcImg'
-								alt='CalcImg'
-							/>
+							<Link to='/main' className='NavLink'>
+								<img
+									src={CalcImg}
+									id='calcImg'
+									alt='CalcImg'
+								/>
+							</Link>
 						</div>
 						<Link to='/main' className='NavLink'>
 							<Goo />
