@@ -7,6 +7,7 @@ import clamp from 'lodash-es/clamp';
 import { useSpring, animated } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
 import { Container, Row, Col } from 'reactstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/Calculator.css';
 
