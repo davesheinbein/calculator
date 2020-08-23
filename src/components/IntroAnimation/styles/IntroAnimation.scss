@@ -1,3 +1,5 @@
+@import '.';
+
 @mixin flexCenter($direction, $justified, $alignment) {
 	display: flex;
 	flex-direction: $direction;
@@ -50,7 +52,7 @@
 			@include marginPadding;
 			margin: auto;
 			color: transparent;
-			font-size: 2rem;
+			// font-size: 2rem;
 			letter-spacing: 0.75em;
 			span {
 				@include marginPadding;
@@ -115,8 +117,38 @@
 	}
 }
 
-@media (min-width: 500px) and (max-width: 900px) {
-	h1 {
-		font-size: 3rem;
+@media (max-device-width: 812px) {
+	.introContainer {
+		.section {
+			h1 {
+				span {
+					font-size: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-device-width: 1366px) {
+	.introContainer {
+		.section {
+			h1 {
+				span {
+					// font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1600px) {
+	.introContainer {
+		.section {
+			h1 {
+				span {
+					// font-size: 1rem;
+				}
+			}
+		}
 	}
 }

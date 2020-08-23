@@ -92,7 +92,6 @@
   padding: 0;
   margin: auto;
   color: transparent;
-  font-size: 2rem;
   letter-spacing: 0.75em;
 }
 
@@ -198,9 +197,9 @@
   }
 }
 
-@media (min-width: 500px) and (max-width: 900px) {
-  h1 {
-    font-size: 3rem;
+@media (max-device-width: 812px) {
+  .introContainer .section h1 span {
+    font-size: 0.5rem;
   }
 }
 /*# sourceMappingURL=IntroAnimation.css.map */

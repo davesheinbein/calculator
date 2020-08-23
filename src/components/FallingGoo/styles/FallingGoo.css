@@ -454,18 +454,26 @@
 @-webkit-keyframes fallingAnimation {
   0% {
     top: -20%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
   100% {
     top: 120%;
+    -webkit-transform: scale(5, 5);
+            transform: scale(5, 5);
   }
 }
 
 @keyframes fallingAnimation {
   0% {
     top: -20%;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
   }
   100% {
     top: 120%;
+    -webkit-transform: scale(5, 5);
+            transform: scale(5, 5);
   }
 }
 /*# sourceMappingURL=FallingGoo.css.map */

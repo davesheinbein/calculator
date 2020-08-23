@@ -203,8 +203,10 @@
 @keyframes fallingAnimation {
 	0% {
 		top: -20%;
+		transform: scale(1, 1);
 	}
 	100% {
 		top: 120%;
+		transform: scale(5, 5);
 	}
 }
