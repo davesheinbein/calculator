@@ -6,7 +6,7 @@ import {
 	getDisplayAction,
 	getEvaluateAction,
 } from '../calcAction/calcActions';
-import Calculator from '../components/Calculator/Calculator';
+import Calculator from '../components/CalcScreen/Calculator/Calculator';
 import {
 	isSuffixAnOperator,
 	validateInput,

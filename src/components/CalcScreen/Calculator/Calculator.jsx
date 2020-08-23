@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Buttons from '../Buttons/Buttons';
-import FinalAnswer from '../FinalAnswer/FinalAnswer';
+import Buttons from '../../CalcScreen/Buttons/Buttons';
+import FinalAnswer from '../../CalcScreen/FinalAnswer/FinalAnswer';
 
 import clamp from 'lodash-es/clamp';
 import { useSpring, animated } from 'react-spring';
@@ -9,6 +9,7 @@ import { useGesture } from 'react-with-gesture';
 import { Container, Row, Col } from 'reactstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './styles/Calculator.css';
 
 const Calculator = (props) => {

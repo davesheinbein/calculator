@@ -1,7 +1,7 @@
 import React from 'react';
 import Goo from '../Goo/Goo';
 import FallingGoo from '../FallingGoo/FallingGoo';
-import CalcImg from '../../images/Calculator.png';
+import CalcImg from '../../../images/Calculator.png';
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';

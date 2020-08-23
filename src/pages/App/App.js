@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './styles/App.css';
 // Components
-import Title from '../../components/Title/Title';
+import Title from '../../components/CalcScreen/Title/Title';
 import { CalcContainer } from '../../containers/CalcContainer';
-import Gesture from '../../components/Headingline/Headingline';
-import IntroAnimation from '../../components/IntroAnimation/IntroAnimation';
+import Gesture from '../../components/CalcScreen/Headingline/Headingline';
+import IntroAnimation from '../../components/HomeScreen/IntroAnimation/IntroAnimation';
 // React Spring
 import { Spring } from 'react-spring/renderprops';
 // Routes
 import { Route, Switch } from 'react-router-dom';
+
+import './styles/App.css';
 
 class App extends Component {
 	/*--- State ---*/
