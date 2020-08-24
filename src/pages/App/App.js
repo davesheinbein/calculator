@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // Components
-import Title from '../../components/CalcScreen/Title/Title';
+import Title from '../../components/Title/Title';
 import { CalcContainer } from '../../containers/CalcContainer';
-import Gesture from '../../components/CalcScreen/Headingline/Headingline';
-import IntroAnimation from '../../components/HomeScreen/IntroAnimation/IntroAnimation';
+import Gesture from '../../components/Headingline/Headingline';
+import IntroAnimation from '../../components/IntroAnimation/IntroAnimation';
 // React Spring
 import { Spring } from 'react-spring/renderprops';
 // Routes

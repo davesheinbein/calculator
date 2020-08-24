@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Buttons from '../../CalcScreen/Buttons/Buttons';
-import FinalAnswer from '../../CalcScreen/FinalAnswer/FinalAnswer';
+import Buttons from '../Buttons/Buttons';
+import FinalAnswer from '../FinalAnswer/FinalAnswer';
 
 import clamp from 'lodash-es/clamp';
 import { useSpring, animated } from 'react-spring';

@@ -6,8 +6,6 @@ import { useGesture } from 'react-with-gesture';
 
 import './styles/Title.css';
 
-
-
 function Title() {
 	const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
 	const bind = useGesture(({ down, delta, velocity }) => {
@@ -23,7 +21,14 @@ function Title() {
 	});
 
 	return (
-		<animated.div {...bind()} style={{ transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`) }} className='headingTitle'>
+		<animated.div
+			{...bind()}
+			style={{
+				transform: xy.interpolate(
+					(x, y) => `translate3d(${x}px,${y}px,0)`
+				),
+			}}
+			className='headingTitle'>
 			<h1>React Redux Calculator</h1>
 		</animated.div>
 	);
