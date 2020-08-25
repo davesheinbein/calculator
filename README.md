@@ -1,4 +1,4 @@
-# **React Reux Calculator**
+# **React Redux Calculator**
 
 ### Click the link to view the website
 
