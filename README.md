@@ -42,6 +42,8 @@ Simple Calculator build using React and Redux. Utilizing react-spring to include
 
 ## Potential Next Steps:
 
+##### - [] Fix calculation for error handling
+
 ##### - [] Play with css more to make colors pop even more
 
 ### Click the link to view the website
