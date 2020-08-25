@@ -26,17 +26,19 @@ Simple Calculator build using React and Redux. Utilizing react-spring to include
 
 #### 3. JavaScript
 
-#### 4. React
+#### 4. Express
 
-#### 5. React-spring
+#### 5. React
 
-#### 6. React-Strap
+#### 6. React-spring
 
-#### 7. Node.js
+#### 7. React-Strap
 
-#### 8. Heroku
+#### 8. Node.js
 
-#### 9. Github
+#### 9. Heroku
+
+#### 10. Github
 
 ## Potential Next Steps:
 
