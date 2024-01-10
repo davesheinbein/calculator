@@ -28,7 +28,7 @@ class App extends Component {
 								<IntroAnimation />
 							</div>
 						)}
-					/>
+					/> 
 					<Route
 						exact
 						path='/main'
