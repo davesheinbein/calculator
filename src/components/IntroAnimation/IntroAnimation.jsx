@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/IntroAnimation.css';
 
 function IntroAnimation() {
+	console.log('Hello There <3');
 	return (
 		<Container>
 			<Row>
