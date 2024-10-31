@@ -11,7 +11,7 @@ function IntroAnimation() {
 	console.log('Hello There <3');
 	return (
 		<Container>
-			<Row>
+			<Row> 
 				<Col xs='auto'>
 					<div className='introContainer'>
 						<section>
