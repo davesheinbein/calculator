@@ -2,7 +2,7 @@
 
 ### Click the link to view the website
 
-[Calculator Webstite](https://calculator-ds.herokuapp.com/)
+[Calculator Webstite](https://calculator-35cff.web.app/)
 
 ### Description
 
@@ -48,4 +48,4 @@ Simple Calculator build using React and Redux. Utilizing react-spring to include
 
 ### Click the link to view the website
 
-[Calculator Webstite](https://calculator-ds.herokuapp.com/)
+[Calculator Webstite](https://calculator-35cff.web.app/)
