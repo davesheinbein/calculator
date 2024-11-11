@@ -44,9 +44,9 @@
 }
 .introContainer .banner {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 20px 0;
   background-color: rgba(0, 0, 0, 0.7);

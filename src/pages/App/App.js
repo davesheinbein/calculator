@@ -13,10 +13,6 @@ import { Route, Switch } from 'react-router-dom';
 import './styles/App.css';
 
 class App extends Component {
-	/*--- State ---*/
-	/*--- Handle Methods ---*/
-	/*--- Lifecycle Methods ---*/
-
 	render() {
 		return (
 			<div className='App'>
@@ -58,11 +54,11 @@ class App extends Component {
 										</div>
 									)}
 								</Spring>
+								<Footer />
 							</div>
 						)}
 					/>
 				</Switch>
-				<Footer /> 
 			</div>
 		);
 	}

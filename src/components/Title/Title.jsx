@@ -26,8 +26,11 @@ function Title() {
 					(x, y) => `translate3d(${x}px,${y}px,0)`
 				),
 			}}
-			className='headingTitle'>
-			<h1>React Redux Calculator</h1>
+			className='headingTitle'
+		>
+			<h1 className='headingTitle-text'>
+				React Redux Calculator
+			</h1>
 		</animated.div>
 	);
 }

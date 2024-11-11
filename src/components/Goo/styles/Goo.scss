@@ -24,7 +24,11 @@ body,
 	font-family: -apple-system, BlinkMacSystemFont,
 		avenir next, avenir, helvetica neue, helvetica, ubuntu,
 		roboto, noto, segoe ui, arial, sans-serif;
-	background: radial-gradient(circle, rgba(208, 255, 243, 1), rgba(30, 241, 189, 1));
+	background: radial-gradient(
+		circle,
+		rgba(208, 255, 243, 1),
+		rgba(30, 241, 189, 1)
+	);
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -52,7 +56,8 @@ body,
 		overflow: hidden;
 		> div {
 			display: block;
-			animation: colorAnimation linear 0s infinite forwards, rotate 10s linear infinite;
+			animation: colorAnimation linear 0s infinite forwards,
+				rotate 10s linear infinite;
 			animation-duration: 10s;
 			animation-direction: alternate;
 			animation-timing-function: ease-in-out;
