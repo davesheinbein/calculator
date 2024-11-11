@@ -32,6 +32,48 @@
 		transform: scale(0.95);
 	}
 
+	.banner {
+		position: absolute;
+		top: -40px;
+		right: -50px;
+		background: linear-gradient(135deg, #8b0000, #ff6347);
+		color: #ffffff;
+		padding: 15px 20px;
+		transform: rotate(45deg);
+		font-size: 24px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		border-radius: 0;
+		border: 2px solid #8b0000;
+		font-family: 'Cinzel', serif;
+		text-transform: uppercase;
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			90% 50%,
+			100% 100%,
+			0 100%,
+			10% 50%
+		);
+		transition: transform 0.3s ease-in-out,
+			box-shadow 0.3s ease-in-out;
+		animation: bannerPulse 2s infinite;
+
+		&:hover {
+			transform: rotate(45deg) scale(1.1);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		@keyframes bannerPulse {
+			0%,
+			100% {
+				transform: rotate(45deg) scale(1);
+			}
+			50% {
+				transform: rotate(45deg) scale(1.05);
+			}
+		}
+	}
+
 	.headingTitle-text {
 		font-size: 20px;
 		color: #ffffff;

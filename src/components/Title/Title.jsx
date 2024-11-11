@@ -28,6 +28,7 @@ function Title() {
 			}}
 			className='headingTitle'
 		>
+			<div className='banner'>Drag Me!</div>
 			<h1 className='headingTitle-text'>
 				React Redux Calculator
 			</h1>
