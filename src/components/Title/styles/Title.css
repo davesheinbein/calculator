@@ -4,6 +4,8 @@
 *
 **/
 .headingTitle {
+  position: absolute;
+  top: 25px;
   cursor: -webkit-grab;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */ /* Konqueror HTML */

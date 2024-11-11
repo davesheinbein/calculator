@@ -10,6 +10,8 @@
 }
 
 .headingTitle {
+	position: absolute;
+	top: 25px;
 	cursor: -webkit-grab;
 	@include noSelect();
 	background: linear-gradient(135deg, #03045e, #00b4d8);
