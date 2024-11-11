@@ -4,10 +4,6 @@
 *
 **/
 .headingTitle {
-  position: absolute;
-  top: 0px;
-  right: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +15,7 @@
   background: linear-gradient(135deg, #03045e, #00b4d8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 .headingTitle:hover {
   background: linear-gradient(135deg, #00b4d8, #03045e);
