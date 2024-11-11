@@ -8,7 +8,7 @@
 }
 
 .gestureLine {
-	width: 95vw;
+	width: 90vw;
 	height: 5px;
 	background: linear-gradient(90deg, hotpink, #ff69b4);
 	cursor: -webkit-grab;
@@ -25,10 +25,13 @@
 	animation: glow 1.5s infinite alternate;
 	margin-top: 0;
 	margin-bottom: 50px;
+	z-index: 4;
+
 	&:active {
 		cursor: -webkit-grabbing;
 		@include noSelect();
 	}
+
 	&:hover {
 		background: linear-gradient(90deg, #ff69b4, hotpink);
 		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -40,6 +43,7 @@
 		box-shadow: 0 0 5px hotpink, 0 0 10px hotpink,
 			0 0 15px hotpink;
 	}
+
 	100% {
 		box-shadow: 0 0 20px hotpink, 0 0 30px hotpink,
 			0 0 40px hotpink;

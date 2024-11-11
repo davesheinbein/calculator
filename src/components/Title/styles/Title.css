@@ -16,6 +16,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border-radius: 3px;
+  z-index: 99999999;
 }
 .headingTitle:hover {
   background: linear-gradient(135deg, #00b4d8, #03045e);
@@ -31,8 +32,8 @@
 }
 .headingTitle .banner {
   position: absolute;
-  top: -40px;
-  right: -50px;
+  top: -30px;
+  right: -75px;
   background: linear-gradient(135deg, #8b0000, #ff6347);
   color: #ffffff;
   padding: 15px 20px;
