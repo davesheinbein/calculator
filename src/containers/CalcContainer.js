@@ -18,9 +18,7 @@ let storeState = '';
 
 const evaluateExpression = (dispatch) => {
 	if (!isSuffixAnOperator(storeState.toString())) {
-		dispatch(getEvaluateAction(storeState)); //
-	} else if (isSuffixAnOperator(storeState.toString())) {
-		dispatch(getEvaluateAction(storeState)); //
+		dispatch(getEvaluateAction(storeState));
 	}
 };
 

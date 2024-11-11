@@ -22,8 +22,19 @@
 	@include marginPadding;
 	height: 100vh;
 	width: 100vw;
-	background: radial-gradient(#333333, #000000);
+	background: radial-gradient(circle, #333333, #000000);
 	font-family: 'Rock Salt', cursive;
+	animation: fadeIn 1s ease-in-out;
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
+	}
+
 	#container {
 		width: 100%;
 		height: 100%;
@@ -39,6 +50,35 @@
 			cursor: pointer;
 		}
 	}
+
+	.banner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		padding: 20px 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		color: #fff;
+		text-align: center;
+		font-size: 24px;
+		z-index: 5000;
+		user-select: none;
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
 	section {
 		@include flexCenter(column, center, center);
 		@include heightWidth;
@@ -59,6 +99,7 @@
 				font-size: 12px;
 				font-stretch: expanded;
 			}
+
 			@include media('>phone', '<=425px') {
 				font-size: 16px;
 			}
@@ -70,12 +111,15 @@
 			@include media('>tablet', '<desktop') {
 				font-size: 38px;
 			}
+
 			@include media('>=desktop') {
 				font-size: 52px;
 			}
+
 			@include media('>=LGdesktop', 'retina2x') {
 				font-size: 68px;
 			}
+
 			span {
 				@include marginPadding;
 				display: table-cell;
@@ -83,33 +127,43 @@
 				&:nth-child(1) {
 					animation-delay: 0s;
 				}
+
 				&:nth-child(2) {
 					animation-delay: 0.25s;
 				}
+
 				&:nth-child(3) {
 					animation-delay: 0.5s;
 				}
+
 				&:nth-child(4) {
 					animation-delay: 0.75s;
 				}
+
 				&:nth-child(5) {
 					animation-delay: 1s;
 				}
+
 				&:nth-child(6) {
 					animation-delay: 1.25s;
 				}
+
 				&:nth-child(7) {
 					animation-delay: 1.5s;
 				}
+
 				&:nth-child(8) {
 					animation-delay: 1.75s;
 				}
+
 				&:nth-child(9) {
 					animation-delay: 2s;
 				}
+
 				&:nth-child(10) {
 					animation-delay: 2.25s;
 				}
+
 				&:nth-child(11) {
 					animation-delay: 2.5s;
 					position: absolute;
@@ -117,6 +171,7 @@
 					left: 50%;
 					transform: translate(-50%, -50%);
 				}
+
 				@keyframes strobeAnimation {
 					0%,
 					100% {
@@ -127,11 +182,19 @@
 							0 0 80px #1ef1bd, 0 0 100px #1ef1bd,
 							0 0 120px #1ef1bd, 0 0 140px #1ef1bd;
 					}
+
 					5%,
 					95% {
 						color: transparent;
 						filter: blur(0px);
 						text-shadow: none;
+					}
+
+					50% {
+						color: #1ef1bd;
+						filter: blur(1px);
+						text-shadow: 0 0 20px #1ef1bd, 0 0 40px #1ef1bd,
+							0 0 60px #1ef1bd, 0 0 80px #1ef1bd;
 					}
 				}
 			}

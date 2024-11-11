@@ -2,46 +2,41 @@
   width: 100%;
   height: 100vh;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #ffe45e;
-  font-family: 'Anton', 'VT323', monospace, sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffe45e, #ffcc00);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: "Anton", "VT323", monospace, sans-serif;
   overflow: hidden;
   position: fixed;
 }
-
 .App .container {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-bottom: 55px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #icon {
   font-size: 30px;
 }
-/*# sourceMappingURL=App.css.map */
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}/*# sourceMappingURL=App.css.map */

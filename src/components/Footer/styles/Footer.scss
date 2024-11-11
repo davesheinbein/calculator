@@ -1,0 +1,33 @@
+.footer {
+	text-align: center;
+	padding: 20px 0;
+	background: linear-gradient(90deg, #f1f1f1, #e2e2e2);
+	width: 100%;
+	bottom: 0;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	div {
+		display: flex;
+		justify-content: center;
+	}
+
+	p {
+		margin: 0 auto 0 0;
+		padding: 0 1em;
+	}
+
+	a {
+		color: #333;
+		text-decoration: none;
+		margin: 0 1em;
+		font-weight: bold;
+
+		&:hover {
+			text-decoration: underline;
+			color: #0073e6;
+		}
+	}
+}

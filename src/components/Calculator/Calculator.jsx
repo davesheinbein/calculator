@@ -1,27 +1,22 @@
 import React from 'react';
-
 import Buttons from '../Buttons/Buttons';
 import FinalAnswer from '../FinalAnswer/FinalAnswer';
-
 import clamp from 'lodash-es/clamp';
 import { useSpring, animated } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
 import { Container, Row, Col } from 'reactstrap';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './styles/Calculator.css';
 
-const Calculator = (props) => {
-	// TO make grabable
+const Calculator = ({ inputExpression, onClick, onSubmit }) => {
 	const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
 	const bind = useGesture(({ down, delta, velocity }) => {
-		velocity = clamp(velocity, 1, 8);
+		const clampedVelocity = clamp(velocity, 1, 8);
 		set({
 			xy: down ? delta : [0, 0],
 			config: {
-				mass: velocity,
-				tension: 500 * velocity,
+				mass: clampedVelocity,
+				tension: 500 * clampedVelocity,
 				friction: 50,
 			},
 		});
@@ -39,15 +34,8 @@ const Calculator = (props) => {
 							),
 						}}
 						className='calcContainer'>
-						<FinalAnswer
-							inputExpression={props.inputExpression}
-						/>
-						<Buttons
-							onClick={props.onClick}
-							onSubmit={() => {
-								props.onSubmit();
-							}}
-						/>
+						<FinalAnswer inputExpression={inputExpression} />
+						<Buttons onClick={onClick} onSubmit={onSubmit} />
 					</animated.div>
 				</Col>
 			</Row>

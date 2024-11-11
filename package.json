@@ -9,6 +9,7 @@
 		"bootstrap": "^4.5.2",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
+		"firebase": "^11.0.1",
 		"heroku": "^9.3.2",
 		"include-media": "^1.4.9",
 		"lodash-es": "^4.17.15",

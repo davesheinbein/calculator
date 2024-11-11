@@ -5,71 +5,69 @@
 **/
 .headingTitle {
   cursor: -webkit-grab;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
   user-select: none;
+  background: linear-gradient(135deg, #03045e, #00b4d8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 8px;
 }
-
+.headingTitle:hover {
+  background: linear-gradient(135deg, #00b4d8, #03045e);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 .headingTitle:active {
   cursor: -webkit-grabbing;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
   user-select: none;
+  transform: scale(0.95);
 }
-
 .headingTitle h1 {
   font-size: 20px;
-  color: #03045e;
+  color: #ffffff;
   margin: 0px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: textGlow 2s ease-in-out infinite alternate;
 }
-
 @media (max-width: 360px) {
   .headingTitle h1 {
     font-size: 2rem;
   }
 }
-
 @media (min-width: 361px) and (max-width: 425px) {
   .headingTitle h1 {
     font-size: 2.75rem;
   }
 }
-
 @media (min-width: 426px) and (max-width: 768px) {
   .headingTitle h1 {
     font-size: 3rem;
   }
 }
-
 @media (min-width: 769px) and (max-width: 1365px) {
   .headingTitle h1 {
     font-size: 5rem;
   }
 }
-
 @media (min-width: 1366px) {
   .headingTitle h1 {
     font-size: 8rem;
   }
 }
-
 @media (min-width: 1920px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1920px) and (min-resolution: 192dpi) {
   .headingTitle h1 {
     font-size: 10rem;
   }
 }
-/*# sourceMappingURL=Title.css.map */
+@keyframes textGlow {
+  from {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+}/*# sourceMappingURL=Title.css.map */

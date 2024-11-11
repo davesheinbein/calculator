@@ -18,38 +18,23 @@ const replaceCharacter = (inputString, newCharacter) => {
 };
 
 export const validateInput = (input, text) => {
-	if (
-		input === 'Infinity' ||
-		(input.length === 1 &&
-			(input.charAt(0) === '0' ||
-				isSuffixAnOperator(input.charAt(0))))
-	) {
+	if (input === 'Infinity' || (input.length === 1 && (input === '0' || isSuffixAnOperator(input)))) {
 		input = '';
 	}
 	switch (text) {
 		case 'delete':
-			if (input.length <= 1) {
-				input = '0';
-			} else {
-				input = input.slice(0, input.length - 1);
-			}
+			input = input.length <= 1 ? '0' : input.slice(0, -1);
 			break;
 		case 'clear':
 			input = '0';
 			break;
 		default:
-			if (isSuffixAnOperator(input)) {
-				if (isSuffixAnOperator(text)) {
-					return replaceCharacter(input, text);
-				}
-			} else if (isSuffixZero(input)) {
-				if (
-					isSuffixAnOperator(input.charAt(input.length - 2))
-				) {
-					return replaceCharacter(input, text);
-				}
+			if (isSuffixAnOperator(input) && isSuffixAnOperator(text)) {
+				return replaceCharacter(input, text);
 			}
-
+			if (isSuffixZero(input) && isSuffixAnOperator(input.charAt(input.length - 2))) {
+				return replaceCharacter(input, text);
+			}
 			input += text;
 	}
 	return input;

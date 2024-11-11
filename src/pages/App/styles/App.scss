@@ -10,7 +10,9 @@
 	height: 100vh;
 	text-align: center;
 	@include flexCenter(column, center, center);
-	background-color: #ffe45e;
+	background: linear-gradient(135deg, #ffe45e, #ffcc00);
+	background-size: 400% 400%;
+	animation: gradientAnimation 15s ease infinite;
 	font-family: 'Anton', 'VT323', monospace, sans-serif;
 	overflow: hidden;
 	position: fixed;
@@ -19,9 +21,22 @@
 		height: 100%;
 		margin: 0;
 		padding: 0;
+		margin-bottom: 55px;
 		@include flexCenter(column, center, center);
 	}
 }
 #icon {
 	font-size: 30px;
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

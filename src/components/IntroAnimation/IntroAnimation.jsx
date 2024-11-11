@@ -11,7 +11,7 @@ function IntroAnimation() {
 	console.log('Hello There <3');
 	return (
 		<Container>
-			<Row> 
+			<Row>
 				<Col xs='auto'>
 					<div className='introContainer'>
 						<section>
@@ -38,10 +38,11 @@ function IntroAnimation() {
 								/>
 							</Link>
 						</div>
+						<div className='banner'>Click Me!</div>
 						<Link to='/main' className='NavLink'>
 							<Goo />
 						</Link>
-						<FallingGoo />
+						{/* <FallingGoo /> */}
 					</div>
 				</Col>
 			</Row>

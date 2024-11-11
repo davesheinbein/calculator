@@ -20,7 +20,8 @@ function Goo() {
 					position: 'absolute',
 					width: 0,
 					height: 0,
-				}}>
+				}}
+			>
 				<filter id='goo'>
 					<feGaussianBlur
 						in='SourceGraphic'
@@ -37,7 +38,8 @@ function Goo() {
 				className='hooks-main'
 				onMouseMove={(e) =>
 					set({ xy: [e.clientX, e.clientY] })
-				}>
+				}
+			>
 				{trail.map((props, index) => (
 					<animated.div
 						key={index}

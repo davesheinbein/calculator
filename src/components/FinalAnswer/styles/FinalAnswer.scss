@@ -10,8 +10,16 @@ $borderColor: #03045e;
 .resultsContainer {
     @include flexCenter(row, center, center);
     border-bottom: 3px solid $borderColor;
+    border-image: linear-gradient(135deg, #03045e, #00b4d8) 1;
     padding: 0px 1em;
     margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, border-image 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+        border-image: linear-gradient(135deg, #00b4d8, #03045e) 1;
+        animation: bounce 0.5s;
+    }
     .resultsNum {
         width: 100%;
         height: 2em;
@@ -19,5 +27,14 @@ $borderColor: #03045e;
         color: #00171f;
         font-size: 2rem;
         @include flexCenter(row, flex-end, center);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }

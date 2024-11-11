@@ -12,14 +12,30 @@
 .headingTitle {
 	cursor: -webkit-grab;
 	@include noSelect();
+	background: linear-gradient(135deg, #03045e, #00b4d8);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease-in-out,
+		background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	border-radius: 8px;
+
+	&:hover {
+		background: linear-gradient(135deg, #00b4d8, #03045e);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	}
+
 	&:active {
 		cursor: -webkit-grabbing;
 		@include noSelect();
+		transform: scale(0.95);
 	}
+
 	h1 {
 		font-size: 20px;
-		color: #03045e;
+		color: #ffffff;
 		margin: 0px;
+		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+		animation: textGlow 2s ease-in-out infinite alternate;
+
 		@include media('<=phone') {
 			font-size: 2rem;
 		}
@@ -42,6 +58,16 @@
 
 		@include media('>=LGdesktop', 'retina2x') {
 			font-size: 10rem;
+		}
+
+		@keyframes textGlow {
+			from {
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+			}
+
+			to {
+				text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 }

@@ -1,34 +1,36 @@
 .gestureLine {
   width: 95vw;
   height: 5px;
-  background: hotpink;
+  background: linear-gradient(90deg, hotpink, #ff69b4);
   cursor: -webkit-grab;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0px auto;
   color: white;
   white-space: pre;
   margin-bottom: 2em;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: glow 1.5s infinite alternate;
 }
-
 .gestureLine:active {
   cursor: -webkit-grabbing;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
   user-select: none;
 }
-/*# sourceMappingURL=Headingline.css.map */
+.gestureLine:hover {
+  background: linear-gradient(90deg, #ff69b4, hotpink);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px hotpink, 0 0 10px hotpink, 0 0 15px hotpink;
+  }
+  100% {
+    box-shadow: 0 0 20px hotpink, 0 0 30px hotpink, 0 0 40px hotpink;
+  }
+}/*# sourceMappingURL=Headingline.css.map */

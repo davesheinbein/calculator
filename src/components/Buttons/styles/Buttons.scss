@@ -14,22 +14,41 @@ $btnColorsB: #ade8f4;
 	button {
 		width: 100%;
 		height: 3.5em;
-		border: none;
+		border: 1px solid $borderColor;
 		border-left: 1px solid $borderColor;
 		border-bottom: 1px solid $borderColor;
 		border-radius: 2px;
-		background-color: $btnColorsB;
+		background: linear-gradient(
+			135deg,
+			$btnColorsB,
+			#00b4d8
+		);
 		color: $btnColorsA;
 		font-size: 2rem;
 		font-weight: 400;
 		font-family: 'Black Ops One', 'Anton', sans-serif,
 			cursive;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add drop shadow
+		transition: transform 0.2s ease-in-out,
+			background 0.3s ease-in-out,
+			box-shadow 0.3s ease-in-out;
+		position: relative;
+		overflow: hidden;
 		&:hover {
 			background-color: #00b4d8;
 			color: #fffacd;
-			border: 1px solid red;
+			border: 1px solid $borderColor;
 			border: none;
 			outline: none;
+			background: linear-gradient(
+				135deg,
+				#00b4d8,
+				$btnColorsB
+			);
+			transform: scale(1.05);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			border: 1px solid $borderColor; // Add border on hover
+			z-index: 9999;
 		}
 		&:active {
 			background-color: $btnColorsA;
@@ -38,11 +57,30 @@ $btnColorsB: #ade8f4;
 			outline: none;
 			border-radius: 50%;
 			opacity: 75%;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		}
 		&:focus {
 			outline: none;
 			border-left: 1px solid $borderColor;
 			border-bottom: 1px solid $borderColor;
+			border: 1px solid $borderColor;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.3);
+			top: 0;
+			left: 0;
+			transform: scale(0);
+			transition: transform 0.5s ease;
+			border-radius: 50%;
+		}
+
+		&:active:after {
+			transform: scale(4);
+			transition: transform 0s;
 		}
 	}
 }

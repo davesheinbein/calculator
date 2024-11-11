@@ -24,7 +24,7 @@ body,
 	font-family: -apple-system, BlinkMacSystemFont,
 		avenir next, avenir, helvetica neue, helvetica, ubuntu,
 		roboto, noto, segoe ui, arial, sans-serif;
-	background: transparent;
+	background: radial-gradient(circle, rgba(208, 255, 243, 1), rgba(30, 241, 189, 1));
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -32,6 +32,15 @@ body,
 	-ms-user-select: none;
 	user-select: none;
 	cursor: default;
+	animation: fadeIn 1s ease-in-out;
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 	.hooks-main {
 		z-index: 999999;
 		position: absolute;
@@ -43,7 +52,7 @@ body,
 		overflow: hidden;
 		> div {
 			display: block;
-			animation: colorAnimation linear 0s infinite forwards;
+			animation: colorAnimation linear 0s infinite forwards, rotate 10s linear infinite;
 			animation-duration: 10s;
 			animation-direction: alternate;
 			animation-timing-function: ease-in-out;
@@ -140,9 +149,9 @@ body,
 					rgba(255, 233, 208, 1) 0%,
 					rgba(241, 144, 30, 1) 100%
 				);
-				box-shadow: 0 0 10px $shadowRed, 0 0 20px $shadowRed,
-					0 0 40px $shadowRed, 0 0 60px $shadowRed,
-					0 0 80px $shadowRed, 0 0 100px $shadowRed;
+				box-shadow: 0 0 20px $shadowRed, 0 0 40px $shadowRed,
+					0 0 60px $shadowRed, 0 0 80px $shadowRed,
+					0 0 100px $shadowRed;
 			}
 			75% {
 				background: radial-gradient(
@@ -168,6 +177,14 @@ body,
 					0 0 140px $shadowPurple, 0 0 160px $shadowPurple,
 					0 0 200px $shadowPurple, 0 0 300px $shadowPurple,
 					0 0 400px $shadowPurple;
+			}
+		}
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
 			}
 		}
 	}

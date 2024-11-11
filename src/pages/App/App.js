@@ -4,6 +4,7 @@ import Title from '../../components/Title/Title';
 import { CalcContainer } from '../../containers/CalcContainer';
 import Gesture from '../../components/Headingline/Headingline';
 import IntroAnimation from '../../components/IntroAnimation/IntroAnimation';
+import Footer from '../../components/Footer/Footer'; // Add this line
 // React Spring
 import { Spring } from 'react-spring/renderprops';
 // Routes
@@ -28,7 +29,7 @@ class App extends Component {
 								<IntroAnimation />
 							</div>
 						)}
-					/> 
+					/>
 					<Route
 						exact
 						path='/main'
@@ -37,7 +38,8 @@ class App extends Component {
 								<Spring
 									from={{ opacity: 0, marginLeft: -2000 }}
 									to={{ opacity: 1, marginLeft: 0 }}
-									config={{ duration: 2500 }}>
+									config={{ duration: 2500 }}
+								>
 									{(props) => (
 										<div style={props}>
 											<Title />
@@ -48,7 +50,8 @@ class App extends Component {
 								<Spring
 									from={{ opacity: 0, marginRight: -2000 }}
 									to={{ opacity: 1, marginRight: 0 }}
-									config={{ duration: 2500 }}>
+									config={{ duration: 2500 }}
+								>
 									{(props) => (
 										<div style={props}>
 											<CalcContainer />
@@ -59,6 +62,7 @@ class App extends Component {
 						)}
 					/>
 				</Switch>
+				<Footer /> 
 			</div>
 		);
 	}
