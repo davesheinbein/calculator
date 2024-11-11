@@ -5,7 +5,12 @@
 **/
 .headingTitle {
   position: absolute;
-  top: 25px;
+  top: 0px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: -webkit-grab;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */ /* Konqueror HTML */

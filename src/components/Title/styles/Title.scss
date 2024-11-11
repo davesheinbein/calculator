@@ -11,7 +11,12 @@
 
 .headingTitle {
 	position: absolute;
-	top: 25px;
+	top: 0px;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	cursor: -webkit-grab;
 	@include noSelect();
 	background: linear-gradient(135deg, #03045e, #00b4d8);
